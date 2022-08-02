@@ -1,0 +1,31 @@
+using System;
+
+namespace heptenMoreTreining
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            //Пилешко меню – 10.35 лв.
+            //• Меню с риба – 12.40 лв.
+             //• Вегетарианско меню – 8.15 лв.
+             //Напишете програма, която изчислява колко ще струва на група хора да си поръчат храна за вкъщи.
+             //Групата ще си поръча и десерт, чиято цена е равна на 20 % от общата сметка(без доставката).
+             //Цената на доставка е 2.50 лв и се начислява най - накрая.
+
+            double chikenMenu = double.Parse(Console.ReadLine());
+            double fishMenu = double.Parse(Console.ReadLine());
+            double VegMenu = double.Parse(Console.ReadLine());
+
+            double priceForChiken = chikenMenu * 10.35;
+            double PriceForFish = fishMenu * 12.40;
+            double priceForVeg = VegMenu * 8.15;
+            double sum = priceForChiken + priceForVeg + PriceForFish;
+            double desert = sum * 0.20;
+            double totalSum =sum + desert + 2.50;
+
+            Console.WriteLine(totalSum);
+        }
+    }
+}
