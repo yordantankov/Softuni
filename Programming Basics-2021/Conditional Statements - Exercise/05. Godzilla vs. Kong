@@ -1,0 +1,38 @@
+using System;
+
+namespace Godzilla_vs._Kong
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double budjet = double.Parse(Console.ReadLine());
+            int statist = int.Parse(Console.ReadLine());
+            double priceForOutfit = double.Parse(Console.ReadLine());
+
+            double priceForDecor = budjet * 0.10;
+
+            if (statist > 150)
+            {
+                priceForOutfit = priceForOutfit - (priceForOutfit * 0.10);
+            }
+
+            double sumForstatistAndOutfit = statist * priceForOutfit;
+            double SumForFilm = sumForstatistAndOutfit + priceForDecor;
+            double total = budjet - SumForFilm;
+
+            if (total >= 0)
+            {
+                Console.WriteLine("Action!");
+                Console.WriteLine($"Wingard starts filming with {total:f2} leva left.");
+            }
+             else 
+            {
+                total = Math.Abs(total);
+                Console.WriteLine("Not enough money!");
+                Console.WriteLine($"Wingard needs {total:f2} leva more.");
+            }
+
+        }
+    }
+}
