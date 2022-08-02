@@ -1,0 +1,24 @@
+using System;
+
+namespace TREINING
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double pencilsPack = double.Parse(Console.ReadLine()); 
+            double  markersPack = double.Parse(Console.ReadLine()); 
+            double  preparationLiters= double.Parse(Console.ReadLine()); 
+            double  percentDiscount= double.Parse(Console.ReadLine());
+
+            double priceForPencils = pencilsPack * 5.80;
+            double priceForMarkers = markersPack * 7.20;
+            double priceForPreparation = preparationLiters * 1.20;
+            double discount = percentDiscount /100;
+            double sum = (priceForMarkers + priceForPencils + priceForPreparation) ;
+            double totalSum = sum - (sum * discount);
+            
+            Console.WriteLine(totalSum);
+        }
+    }
+}
