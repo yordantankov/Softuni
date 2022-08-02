@@ -1,0 +1,47 @@
+using System;
+
+namespace Toy_Shop
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double priceForVacantion = double.Parse(Console.ReadLine());
+            int puzzles = int.Parse(Console.ReadLine());
+            int dolls = int.Parse(Console.ReadLine());
+            int bears = int.Parse(Console.ReadLine());
+            int minions = int.Parse(Console.ReadLine());
+            int trucks = int.Parse(Console.ReadLine());
+
+            int toysCount = puzzles * dolls + bears + minions + trucks;
+
+            double priceForpuzzles = puzzles * 2.60;
+            double priceForDolls = dolls * 3.00;
+            double priceForBears = bears * 4.10;
+            double priceForMiniions = minions * 8.20;
+            double priceForTrucks = trucks * 2.00;
+
+            double profit = priceForBears + priceForDolls + priceForMiniions + priceForpuzzles + priceForTrucks;
+
+            if (toysCount >= 50)
+            {
+                profit = profit - profit * 0.25;
+            }
+            profit = profit - profit * 0.1;
+            double difference = profit - priceForVacantion;
+
+            if (difference >= 0)
+            {
+                Console.WriteLine($"Yes! {difference:f2} lv left.");
+            }
+            else
+            {
+                difference = Math.Abs(difference);
+                Console.WriteLine($"Not enough money! {difference:f2} lv needed.");
+
+            }
+
+        }
+    }
+}
+
