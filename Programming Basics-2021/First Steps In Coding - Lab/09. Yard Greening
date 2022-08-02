@@ -1,0 +1,17 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double cm3 = double.Parse(Console.ReadLine()); // ⦁    Кв. метри, които ще бъдат озеленени 
+            double green = cm3 * 7.61; // Пресмятаме цената за озеленяване на целия двор:
+            double discount = green * 0.18; // Приспадаме отстъпката (18% = 0.18) от общата сума:
+            double endprice = green - discount; // Калкулираме крайната цена на услугата:
+            Console.WriteLine($"The final price is: {endprice} lv.");
+            Console.WriteLine($"The discountt is: {discount} lv.");
+        }
+    }
+} 
