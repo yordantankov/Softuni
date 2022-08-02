@@ -1,0 +1,17 @@
+using System;
+
+namespace _8zadacha_2riopit
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int foodFordogs = int.Parse(Console.ReadLine());
+            int foodForCats = int.Parse(Console.ReadLine());
+            double price1 = foodFordogs * 2.50;
+            double price2 = foodForCats * 4;
+            double totalSum = price1 + price2;
+            Console.WriteLine($"{totalSum} lv.");
+        }
+    }
+}
