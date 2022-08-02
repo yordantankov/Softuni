@@ -1,0 +1,29 @@
+using System;
+
+namespace _10._Odd_Even_Sum
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string serial = Console.ReadLine();
+            double episodeTime = double.Parse(Console.ReadLine());
+            double restTime = double.Parse(Console.ReadLine());
+
+            double lunchTime = restTime / 8;
+            double restInresttime = restTime / 4;
+            double sum = lunchTime + restInresttime + episodeTime;
+            double diff = restTime - sum;
+            if (sum <= restTime)
+            {
+                Console.WriteLine($"You have enough time to watch {serial} and left with {Math.Ceiling(diff)} minutes free time.");
+            }
+            else if (sum> restTime)
+            {
+                diff = Math.Abs(diff);
+                Console.WriteLine($"You don't have enough time to watch {serial}, you need {Math.Ceiling(diff)} more minutes.");
+            }
+            
+        }
+    }
+}
