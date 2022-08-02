@@ -1,0 +1,30 @@
+using System;
+
+namespace World_Swimming_Record._2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double worldRecord = double.Parse(Console.ReadLine());
+            double meters = double.Parse(Console.ReadLine());
+            double timePerSecond = double.Parse(Console.ReadLine());
+
+            double delay = meters / 15;
+            delay = Math.Floor(delay);
+            delay = delay * 12.5;
+
+            double recordIvan = meters *  timePerSecond + delay;
+
+            if (recordIvan < worldRecord)
+            {
+                Console.WriteLine($" Yes, he succeeded! The new world record is {recordIvan:f2} seconds.");
+            }
+            else
+            {
+                Console.WriteLine($"No, he failed! He was {(recordIvan-worldRecord):f2} seconds slower.");
+            }
+            
+        }
+    }
+}
