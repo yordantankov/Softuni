@@ -1,0 +1,22 @@
+using System;
+
+namespace Basketball_Equipment
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int taxPerYear = int.Parse(Console.ReadLine());
+
+            double shoes = taxPerYear * 0.6;
+            double outfit = shoes *0.8 ;
+            double ball = outfit / 4;
+            double acc = ball / 5;
+
+            double totalSum = taxPerYear + shoes + outfit + ball + acc;
+
+            Console.WriteLine(totalSum); 
+
+        }
+    }
+}
