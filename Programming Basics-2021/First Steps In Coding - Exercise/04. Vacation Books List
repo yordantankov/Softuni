@@ -1,0 +1,21 @@
+using System;
+
+namespace VacationBooksList
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int numberOfPages = int.Parse(Console.ReadLine());
+            int Pages = int.Parse(Console.ReadLine());
+            int numberOfDays = int.Parse(Console.ReadLine());
+
+            int timeToRead = numberOfPages / Pages;
+            int hoursToRead = timeToRead / numberOfDays;
+
+            Console.WriteLine(hoursToRead);
+
+
+        }
+    }
+}
