@@ -1,0 +1,32 @@
+using System;
+
+namespace Repainting
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double naylon = double.Parse(Console.ReadLine());
+            double paint = double.Parse(Console.ReadLine());
+            double  thinner= double.Parse(Console.ReadLine());
+            double workhours = double.Parse(Console.ReadLine());
+
+
+            double bags = 0.40;
+
+            double sumNaylon = (naylon + 2) * 1.50;
+            double sumPaint = (paint + (paint * 0.10)) * 14.50;
+            double sumThinner = thinner * 5.00;
+            double sumForMaterials = sumNaylon + sumPaint + sumThinner + bags;
+            double sumForWorker = (sumForMaterials * 0.30) * workhours;
+            double totalSum = sumForMaterials + sumForWorker;
+            Console.WriteLine(totalSum);
+
+
+
+
+
+
+        }
+    }
+}
