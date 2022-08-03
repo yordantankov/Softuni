@@ -1,0 +1,29 @@
+using System;
+
+namespace _03._Animal_Type
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //2.crocodile,tortoise, snake -  reptile
+
+            string animal = Console.ReadLine();
+
+            switch (animal)
+            {
+                case "dog":
+                    Console.WriteLine("mammal");
+                    break;
+                case "crocodile":
+                case "tortoise":
+                case "snake":
+                    Console.WriteLine("reptile");
+                    break;
+                default:
+                    Console.WriteLine("unknown");       
+                    break;
+            }
+        }
+    }
+}
