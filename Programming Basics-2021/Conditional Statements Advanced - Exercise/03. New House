@@ -1,0 +1,84 @@
+using System;
+
+namespace _03._New_House
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string typeFlower = Console.ReadLine();
+            int quntityFlowers = int.Parse(Console.ReadLine());
+            int budget = int.Parse(Console.ReadLine());
+            double price = 0.0;
+
+
+            if (typeFlower == "Roses")
+            {
+                price = 5.00;
+
+                if (quntityFlowers > 80)
+                {
+                    price = price - (price * 0.1);
+                }
+            }
+            else if (typeFlower == "Dahlias")
+            {
+                price = 3.80;
+
+
+                if (quntityFlowers > 90)
+                {
+                    price = price - (price * 0.15);
+                }
+
+            }
+ 
+            else if (typeFlower == "Tulips")
+            {
+                price = 2.80;
+
+
+                if (quntityFlowers > 80)
+                {
+                    price = price - (price * 0.15);
+                }
+
+            }
+            else if (typeFlower == "Narcissus")
+            {
+                price = 3.00;
+
+
+                if (quntityFlowers < 120)
+                {
+                    price = price + (price * 0.15);
+                }
+
+            }
+            else if (typeFlower == "Gladiolus")
+            {
+                price = 2.50;
+
+
+                if (quntityFlowers < 80)
+                {
+                    price = price + (price * 0.20);
+                }
+
+            }
+
+            double Sum = quntityFlowers * price;
+            double difference = budget - Sum;
+                if (budget >= Sum)
+            {
+                Console.WriteLine($"Hey, you have a great garden with {quntityFlowers} {typeFlower} and {difference:f2} leva left.");
+            }
+            else if (budget < Sum)
+            {
+                difference = Math.Abs(difference);
+                Console.WriteLine($"Not enough money, you need {difference:f2} leva more.");
+            }
+
+        }
+    }
+}
