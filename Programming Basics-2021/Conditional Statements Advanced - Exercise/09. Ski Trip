@@ -1,0 +1,70 @@
+using System;
+
+namespace _09._Ski_Trip
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //⦁	"room for one person" – 18.00 лв за нощувка
+            //⦁	"apartment" – 25.00 лв за нощувка
+            //⦁	"president apartment" – 35.00 лв за нощувка
+
+            double days = double.Parse(Console.ReadLine());
+            string typeRoom = Console.ReadLine();
+            string vibe = Console.ReadLine();
+            double price = 0 ;
+            
+            double totalPrice;
+
+            double night = days - 1;
+            if (typeRoom == "room for one person")
+            {
+                price = night * 18.00;
+            }
+            else if (typeRoom == "apartment")
+            {
+                price = night * 25.00;
+                if (days< 10)
+                {
+                    price -= price * 0.30;
+                }
+                else if (days >=10 && days <= 15)
+                {
+                    price -= price * 0.35;
+                }
+                else
+                {
+                    price -= price * 0.50;
+                }
+            }
+            else if (typeRoom == "president apartment")
+            {
+                price = night * 35.00;
+                if (days < 10 )
+                {
+                    price -= price * 0.10;
+                }
+                else if (days >= 10 && days <= 15)
+                {
+                    price -= price * 0.15;
+                }
+                else
+                {
+                    price -= price * 0.20;
+                }
+            }
+
+            if (vibe == "positive")
+            {
+                  price += price * 0.25;
+            }
+            else if (vibe == "negative")
+            {
+                price -= price * 0.10;
+            }
+
+            Console.WriteLine($"{price:f2}");
+        }
+    }
+}
