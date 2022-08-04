@@ -1,0 +1,31 @@
+using System;
+
+namespace _04._Even_Powers_of_2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num = int.Parse(Console.ReadLine());
+            int maxNumber = int.MinValue;
+            int minNumber = int.MaxValue;
+
+            for (int i = 0; i < num; i++)
+            {
+                int number = int.Parse(Console.ReadLine());
+
+                if (number > maxNumber)
+                {
+                    maxNumber = number;
+                }
+                if (number < minNumber)
+                {
+                    minNumber = number;
+                }
+
+            }
+            Console.WriteLine("Max number: " + maxNumber);
+            Console.WriteLine("Min number: " + minNumber);
+        }
+    }
+}
