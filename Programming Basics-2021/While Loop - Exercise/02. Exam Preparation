@@ -1,0 +1,41 @@
+using System;
+
+namespace _02._Exam_Preparation._2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int fails = int.Parse(Console.ReadLine());
+            int counterFails = 0;
+            double grades = 0;
+            double TasksNum = 0;
+            string lastProblem = "";
+            string input = Console.ReadLine();
+            while (input != "Enough")
+            {
+                
+                double grade = double.Parse(Console.ReadLine());
+                grades += grade;
+                TasksNum++;
+                lastProblem = input;
+                if (grade <= 4)
+                {
+                    counterFails++;
+                    if (counterFails == fails)
+                    {
+                        Console.WriteLine($"You need a break, {counterFails} poor grades.");
+                        return;
+                    }
+
+                }
+
+                input = Console.ReadLine();
+            }
+            double average = grades / TasksNum;
+            Console.WriteLine($"Average score: {average:f2}");
+            Console.WriteLine($"Number of problems: {TasksNum}");
+            Console.WriteLine($"Last problem: {lastProblem}");
+        }
+    }
+}
