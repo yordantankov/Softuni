@@ -1,0 +1,30 @@
+using System;
+
+namespace __Преместване
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int widht = int.Parse(Console.ReadLine());
+            int lenght = int.Parse(Console.ReadLine());
+            int hеight = int.Parse(Console.ReadLine());
+
+            int freeSpace = widht * lenght * hеight;
+            int boxsize = 0;
+            string input = Console.ReadLine();
+            while (input != "Done")
+            {
+                boxsize = int.Parse(input);
+                freeSpace -= boxsize;
+                if (freeSpace<= 0)
+                {
+                    Console.WriteLine($"No more free space! You need {Math.Abs(freeSpace)} Cubic meters more.");
+                    return;
+                }
+                input = Console.ReadLine();
+            }
+            Console.WriteLine($"{freeSpace} Cubic meters left.");
+        }
+    }
+}
