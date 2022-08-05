@@ -1,0 +1,28 @@
+using System;
+
+namespace Трейнинг.след.два.дни
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string favBook = Console.ReadLine();
+            int counterBooks = 0;
+
+            string input = Console.ReadLine();
+            while (input != "No More Books")
+            {
+                
+                if (input == favBook)
+                {
+                    Console.WriteLine($"You checked {counterBooks} books and found it.");
+                    return;
+                }
+                counterBooks++;
+                input = Console.ReadLine();
+            }
+            Console.WriteLine("The book you search is not here!");
+            Console.WriteLine($"You checked {counterBooks} books.");
+        }
+    }
+}
