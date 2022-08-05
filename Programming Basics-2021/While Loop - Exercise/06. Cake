@@ -1,0 +1,28 @@
+using System;
+
+namespace __Торта
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int widht = int.Parse(Console.ReadLine());
+            int lenght = int.Parse(Console.ReadLine());
+            int cakeSize = widht * lenght;
+            int pieceSize = 1;
+            string input = Console.ReadLine();
+            while (input != "STOP")
+            {
+                pieceSize = int.Parse(input);
+                cakeSize -= pieceSize;
+                if (cakeSize<= 0)
+                {
+                    Console.WriteLine($"No more cake left! You need {Math.Abs(cakeSize)} pieces more.");
+                    return;
+                }
+                input = Console.ReadLine();
+            }
+            Console.WriteLine($"{cakeSize} pieces are left.");
+        }
+    }
+}
