@@ -1,0 +1,64 @@
+using System;
+
+namespace _05._Special_Numbers
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //("student", "standard", "kid")
+            double allKidsCount = 0;
+            double allStandartscount = 0;
+            double allStudentscount = 0;
+            double counterPeople = 0;
+            double counterStudent;
+            double counterStandart;
+            double counterKid;
+            string input = Console.ReadLine();
+            while (input != "Finish")
+            {
+                counterStudent = 0;
+                counterStandart = 0;
+                counterKid = 0;
+                double freeSeats = double.Parse(Console.ReadLine());
+                for (int i = 1; i <= freeSeats; i++)
+                {
+                    string type = Console.ReadLine();
+                    if (type == "End")
+                    {
+                        break;
+                    }
+                    if (type == "student")
+                    {
+                        allStudentscount++;
+                        counterPeople++;
+                        counterStudent++;
+                    }
+                    if (type == "standard")
+                    {
+                        allStandartscount++;
+                        counterPeople++;
+                        counterStandart++;
+                    }
+                    if (type == "kid")
+                    {
+                        allKidsCount++;
+                        counterPeople++;
+                        counterKid++;
+                    }
+                }
+                double full = (counterKid + counterStandart + counterStudent) / freeSeats * 100;
+                Console.WriteLine($"{input} - {full:F2}% full.");
+                input = Console.ReadLine();
+            }
+            Console.WriteLine($"Total tickets: {counterPeople}");
+            Console.WriteLine($"{allStudentscount / counterPeople * 100:f2}% student tickets.");
+            Console.WriteLine($"{allStandartscount / counterPeople * 100:f2}% standard tickets.");
+            Console.WriteLine($"{allKidsCount / counterPeople * 100:f2}% kids tickets.");
+            //  "{процент на студентските билети}% student tickets."
+            //⦁	"{процент на стандартните билети}% standard tickets."
+            //⦁	"{процент на детските билети}% kids tickets."
+
+        }
+    }
+}
