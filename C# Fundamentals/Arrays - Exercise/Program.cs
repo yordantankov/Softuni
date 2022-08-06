@@ -1,40 +1,31 @@
 ﻿using System;
 using System.Linq;
 
-namespace _03.ZigZag
+namespace Array_Rotation
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-         int n = int.Parse(Console.ReadLine());
-         //zig-zag filled arrays
-          int [] arr1 = new int[n];
-          int [] arr2 = new int[n];
+            int [] arr= Console.ReadLine()
+                .Split(' ', StringSplitOptions.RemoveEmptyEntries)
+                .Select(int.Parse)
+                .ToArray();
+            int rotationCount = int.Parse(Console.ReadLine());
 
-            for (int row = 1; row <= n; row++)
+           
+            for (int rot = 1; rot <= rotationCount; rot++)
             {
-                int []currentRowData = Console.ReadLine()
-                    .Split(' ', StringSplitOptions.RemoveEmptyEntries)
-                    .Select(int.Parse)
-                    .ToArray();
-                int firstNumber = currentRowData[0];
-                int secondNumber = currentRowData[1];
-
-                if (row% 2 !=0)
+                int firstEl = arr[0];
+                for (int i = 0; i <= arr.Length - 2; i++)
                 {
-                    arr1[row - 1] = firstNumber;
-                    arr2[row - 1] = secondNumber;
+                    arr[i] = arr[i + 1];
                 }
-                else
-                {
-                    arr1[row - 1] = secondNumber;
-                    arr2[row - 1] = firstNumber;    
-                }
-               
+                arr[arr.Length - 1] = firstEl;
             }
-            Console.WriteLine(String.Join(" ", arr1));
-            Console.WriteLine(String.Join(" ", arr2));
+            Console.WriteLine(String.Join(" ", arr));
+           
+
         }
     }
 }
