@@ -1,0 +1,39 @@
+using System;
+
+namespace _04._Train_The_Trainers
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int jury = int.Parse(Console.ReadLine());
+            double counterResult = 0;
+            double averageScore;
+            double totalAverageScore = 0;
+            double totalScore;
+            double absScore = 0;
+
+            string input = Console.ReadLine();
+            while (input != "Finish")
+            {
+                averageScore = 0;
+                totalScore = 0;
+                for (int i = 1; i <= jury; i++)
+                {
+                    double score = double.Parse(Console.ReadLine());
+                    counterResult++;
+                    totalScore += score;
+                    absScore += score;
+                    
+                }
+                averageScore = totalScore / jury;
+                Console.WriteLine($"{input} - {averageScore:f2}.");
+                
+                input = Console.ReadLine();
+            }
+            totalAverageScore = absScore / counterResult;
+            Console.WriteLine($"Student's final assessment is {totalAverageScore:f2}.");
+
+        }
+    }
+}
