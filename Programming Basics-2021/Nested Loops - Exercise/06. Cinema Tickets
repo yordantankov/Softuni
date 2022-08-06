@@ -1,0 +1,235 @@
+SoftUni Judge
+Състезания 
+Решения
+Обратна връзка
+Здравей, yordan.tankov!
+Изход
+Търсене
+Начало Решения 24205462
+Решение №24205462 от yordan.tankov към задача 06. Cinema Tickets
+Нулев тест №1 (Верен отговор)
+Резултатът от нулевите тестове не се включва към крайния резултат.
+Очакван изход:Твоят изход:
+1
+Taxi - 60.00% full.
+2
+Scary Movie - 100.00% full.
+3
+Total tickets: 12
+4
+66.67% student tickets.
+5
+25.00% standard tickets.
+6
+8.33% kids tickets.
+1
+Taxi - 60.00% full.
+2
+Scary Movie - 100.00% full.
+3
+Total tickets: 12
+4
+66.67% student tickets.
+5
+25.00% standard tickets.
+6
+8.33% kids tickets.
+Използвано време: 0.130 s
+Използвана памет: 0.00 MB
+Нулев тест №2 (Верен отговор)
+Резултатът от нулевите тестове не се включва към крайния резултат.
+Очакван изход:Твоят изход:
+1
+The Matrix - 40.00% full.
+2
+The Green Mile - 35.29% full.
+3
+Amadeus - 100.00% full.
+4
+Total tickets: 17
+5
+41.18% student tickets.
+6
+47.06% standard tickets.
+7
+11.76% kids tickets.
+1
+The Matrix - 40.00% full.
+2
+The Green Mile - 35.29% full.
+3
+Amadeus - 100.00% full.
+4
+Total tickets: 17
+5
+41.18% student tickets.
+6
+47.06% standard tickets.
+7
+11.76% kids tickets.
+Използвано време: 0.130 s
+Използвана памет: 0.00 MB
+Тест №1 (Верен отговор)
+Използвано време: 0.120 s
+Използвана памет: 0.00 MB
+Тест №2 (Верен отговор)
+Използвано време: 0.140 s
+Използвана памет: 0.00 MB
+Тест №3 (Верен отговор)
+Използвано време: 0.140 s
+Използвана памет: 0.00 MB
+Тест №4 (Верен отговор)
+Използвано време: 0.120 s
+Използвана памет: 0.00 MB
+Тест №5 (Верен отговор)
+Използвано време: 0.120 s
+Използвана памет: 0.00 MB
+Тест №6 (Верен отговор)
+Използвано време: 0.120 s
+Използвана памет: 0.00 MB
+Тест №7 (Верен отговор)
+Използвано време: 0.130 s
+Използвана памет: 0.00 MB
+Тест №8 (Верен отговор)
+Използвано време: 0.120 s
+Използвана памет: 0.00 MB
+Тест №9 (Верен отговор)
+Използвано време: 0.120 s
+Използвана памет: 0.00 MB
+Тест №10 (Верен отговор)
+Използвано време: 0.130 s
+Използвана памет: 0.00 MB
+Сорс код
+1
+using System;
+2
+​
+3
+namespace _05._Special_Numbers
+4
+{
+5
+    class Program
+6
+    {
+7
+        static void Main(string[] args)
+8
+        {
+9
+            //("student", "standard", "kid")
+10
+            double allKidsCount = 0;
+11
+            double allStandartscount = 0;
+12
+            double allStudentscount = 0;
+13
+            double counterPeople = 0;
+14
+            double counterStudent;
+15
+            double counterStandart;
+16
+            double counterKid;
+17
+            string input = Console.ReadLine();
+18
+            while (input != "Finish")
+19
+            {
+20
+                counterStudent = 0;
+21
+                counterStandart = 0;
+22
+                counterKid = 0;
+23
+                double freeSeats = double.Parse(Console.ReadLine());
+24
+                for (int i = 1; i <= freeSeats; i++)
+25
+                {
+26
+                    string type = Console.ReadLine();
+27
+                    if (type == "End")
+28
+                    {
+29
+                        break;
+30
+                    }
+31
+                    if (type == "student")
+32
+                    {
+33
+                        allStudentscount++;
+34
+                        counterPeople++;
+35
+                        counterStudent++;
+36
+                    }
+37
+                    if (type == "standard")
+38
+                    {
+39
+                        allStandartscount++;
+40
+                        counterPeople++;
+41
+                        counterStandart++;
+42
+                    }
+43
+                    if (type == "kid")
+44
+                    {
+45
+                        allKidsCount++;
+46
+                        counterPeople++;
+47
+                        counterKid++;
+48
+                    }
+49
+                }
+50
+                double full = (counterKid + counterStandart + counterStudent) / freeSeats * 100;
+51
+                Console.WriteLine($"{input} - {full:F2}% full.");
+52
+                input = Console.ReadLine();
+53
+            }
+54
+            Console.WriteLine($"Total tickets: {counterPeople}");
+55
+            Console.WriteLine($"{allStudentscount / counterPeople * 100:f2}% student tickets.");
+56
+            Console.WriteLine($"{allStandartscount / counterPeople * 100:f2}% standard tickets.");
+57
+            Console.WriteLine($"{allKidsCount / counterPeople * 100:f2}% kids tickets.");
+58
+            //  "{процент на студентските билети}% student tickets."
+59
+            //⦁ "{процент на стандартните билети}% standard tickets."
+60
+            //⦁ "{процент на детските билети}% kids tickets."
+61
+​
+62
+        }
+63
+    }
+64
+}
+65
+​
+Дата на създаване: 07/12/2021 16:36:51
+
+© 2011-2022 - Open Judge System (OJS) 1.5.20150729.95737d0 - running on Windows. Проект с отворен код.
