@@ -1,0 +1,40 @@
+using System;
+
+namespace _02._Equal_Sums_Even_Odd_Position
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int first = int.Parse(Console.ReadLine());
+            int second = int.Parse(Console.ReadLine());
+            int oddsum;
+            int evenSum;
+
+            string currentNum;
+            for (int i = first; i <= second; i++)
+            {
+                currentNum = i.ToString();
+                oddsum = 0;
+                evenSum = 0;
+                
+                for (int j = 0; j < currentNum.Length; j++)
+                {
+                    if (j % 2 == 0)
+                    {
+                        evenSum += currentNum[j];
+                    }
+                    else
+                    {
+                        oddsum += currentNum[j];
+                    }
+                   
+                }
+                if (evenSum == oddsum)
+                {
+                    Console.Write(i + " ");
+                }
+            }
+        }
+    }
+}
