@@ -1,0 +1,10 @@
+given_numbers = input().split(", ")
+
+positive_nums = (num for num in given_numbers if int(num) >= 0)
+negative_nums = (num for num in given_numbers if int(num) < 0)
+even_nums = (num for num in given_numbers if int(num) % 2 == 0)
+odd_nums = (num for num in given_numbers if int(num) % 2 != 0)
+print(f'Positive:', ", ".join(positive_nums))
+print(f'Negative:', ", ".join(negative_nums))
+print(f'Even:', ", ".join(even_nums))
+print(f'Odd:', ", ".join(odd_nums))
