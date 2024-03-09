@@ -1,0 +1,60 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
+
+html {
+    font: 14px/1.5 "Lucida Sans", 'Lucida Sans Regular', 'Lucida Grande'
+}
+
+body, table {
+    font: inherit;
+}
+
+body{
+    padding: 4em;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav li {
+    display: block;
+    list-style: none outside;
+}
+
+nav a {
+    color: #369;
+}
+
+nav a [class*="fa-"]{
+    color: #0884d6;
+}
+
+.button{
+    display: inline-block;
+    line-height: 1;
+    padding: 0.6em 1em;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    background-color: rgb(6, 114, 150);
+    color: #FFF;
+}
+
+
+.button:hover {
+    background: rgb(3, 160, 250);
+}
+
+.button.button-danger{
+    background-color: #fd0a0a;
+}
+
+.button.button-danger:hover {
+    background-color: #630101;
+}
+
+.button.button-shopping {
+    background: #03b103;
+}
+
+.button.button-shopping:hover{
+    background-color: #045704;
+}
