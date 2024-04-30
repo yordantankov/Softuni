@@ -1,0 +1,41 @@
+span{
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 30px;
+    
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 15vw;
+    height: 35rem;
+    margin: auto;
+}
+
+.item:nth-child(1) { order: 1; }
+
+.item:nth-child(2) { order: 2; }
+
+.item:nth-child(3) { order: 3; }
+
+.item:nth-child(4) { order: 4; }
+
+.item:nth-child(5) { order: 5; }
+
+.item:nth-child(6) { order: 6; }
+
+.item:nth-child(7) { order: 3; }
+
+.item:nth-child(8) { order: 8; }
+
+.item:nth-child(9) { order: 9; }
+
+.item:nth-child(10) { order: 10; }
+
+.item:nth-child(1) { order: 11; }
+
+.item:nth-child(12) { order: 12; }
