@@ -1,0 +1,28 @@
+body{
+    box-sizing: border-box;
+}
+
+div,
+section{
+    display: flex;
+    align-items: center;
+}
+
+.container{
+    max-width: 65vw;
+}
+
+span{
+    border: 1px solid black;
+    padding: 15px;
+   
+}
+
+.notes{
+    flex-direction: column; 
+}
+
+
+.work{
+    flex-wrap: wrap;
+}
