@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px solid black;
+    
+    color: black;
+    padding: 10px;
+  }
+
+  nav {
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    gap: 10px;
+    color: rgb(0, 153, 0)
+  }
+
+
+  p{
+    font-size: 20px;
+    max-width: 130ch;
+    text-align: center;
+  }
+ 
