@@ -1,0 +1,32 @@
+body{
+    display: flex;
+    text-align: center;
+}
+
+
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    
+}
+
+li{
+    border: 10px solid black;
+    box-shadow: 0 0 10px;
+    display: block;
+    flex-wrap: wrap;
+    margin: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    
+}
+
+img{
+    display: block;
+    margin: 20px;
+    
+}
