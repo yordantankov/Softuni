@@ -1,0 +1,17 @@
+header{
+    border-bottom: 5px solid black;
+}
+
+
+.container{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+
+img{
+    border: 2px solid black;
+    padding: 5px;
+       
+}
