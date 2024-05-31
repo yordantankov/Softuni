@@ -1,0 +1,165 @@
+
+
+  
+  .team-description ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .team-description ul li {
+    flex: 0 0 48%;
+  }
+  
+  
+
+  header nav {
+    margin-left: 10%;
+  }
+
+  header nav ul {
+    margin: auto;
+    text-align: center;
+  }
+  
+  header nav ul li {
+
+    padding: 8px ;
+  }
+  
+  .header-title {
+    padding: 2em 0;
+  }
+  
+  .header-title h1 {
+    font-size: 28px;
+  }
+  
+  .header-title p {
+    font-size: 14px;
+  }
+  
+  .header-title button {
+    font-size: 12px;
+  }
+  
+  .choose-us ul {
+    flex-direction: column; 
+  }
+  
+  .choose-us li {
+    flex: 0 0 100%;
+  }
+  
+  .choose-us li img {
+    width: 4rem;
+    height: 4rem;
+  }
+  
+  .team-description-wrapper,
+  .about-us {
+    width: 100%;
+  }
+  
+  .team-description ul li img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .blog-news ul .item {
+    flex: 0 0 100%;
+  }
+  
+  .blog-news ul .item .content {
+    padding: 1rem; 
+  }
+  
+  .blog-news .content h4 {
+    font-size: 16px;
+  }
+  
+  .blog-news ul .item .avatar {
+    height: 100px;
+  }
+  
+  @media screen and (max-width: 600px) {
+  header nav {
+    margin: auto;
+  }
+
+  header nav ul {
+    display: block;
+    margin: auto;
+    text-align: center;
+    padding: 0;
+    align-items: center;
+}
+
+header nav ul li {
+    display: block;
+    margin: 5px 0;
+}
+
+  .header-title {
+    padding: 1em 0;
+  }
+
+  .header-title h1 {
+    font-size: 22px;
+  }
+
+  .header-title p {
+    font-size: 12px;
+  }
+
+  .header-title button {
+    font-size: 10px;
+  }
+
+  .choose-us li {
+    flex: 0 0 100%;
+  }
+
+  .choose-us li img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .team-description-wrapper,
+  .about-us {
+    width: 100%;
+  }
+
+  .team-description ul li img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .blog-news ul .item {
+    flex: 0 0 100%;
+  }
+
+  .blog-news .content h4 {
+    font-size: 14px;
+  }
+
+  .blog-news ul .item .avatar {
+    height: 80px;
+  }
+
+  .team-description ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .team-description ul li {
+    flex: 0 0 20%;
+    margin-bottom: 2em; 
+  }
+
+  span{
+    font-style: italic;
+  }
+}
+
+
